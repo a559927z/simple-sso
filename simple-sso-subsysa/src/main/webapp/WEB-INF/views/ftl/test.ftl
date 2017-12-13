@@ -1,2 +1,2 @@
 Protected Resource Page!
-<a href="/logout">Logout</a>
+<a href="/simple-sso-server/logout">Logout</a>

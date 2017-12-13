@@ -40,7 +40,7 @@ public class LoginController {
 		// 验证用户
 		if (!"sheefee".equals(request.getParameter("username"))) {
 			model.addAttribute("error", "user not exist.");
-			return "redirect:/";
+			return "redirect:/simple-sso-server/";
 		}
 
 		// 授权
@@ -59,7 +59,7 @@ public class LoginController {
 			return "redirect:" + clientUrl + "?" + AuthConst.TOKEN + "=" + token;
 		}
 
-		return "redirect:/";
+		return "redirect:/simple-sso-server/";
 	}
 
 	/**
@@ -95,6 +95,6 @@ public class LoginController {
 			}
 		}
 		
-		return "redirect:/";
+		return "redirect:/simple-sso-server/";
 	}
 }

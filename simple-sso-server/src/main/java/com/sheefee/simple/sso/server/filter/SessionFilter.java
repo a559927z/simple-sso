@@ -54,13 +54,13 @@ public class SessionFilter implements Filter{
 			return;
 		}
 		// 登录请求，放行
-		if ("/".equals(uri) || "/login".equals(uri)) {
+		if ("/simple-sso-server/".equals(uri) || "/simple-sso-server/login".equals(uri)) {
 			chain.doFilter(req, res);
 			return;
 		}
 		
 		// 其他请求，拦截
-		response.sendRedirect("/");
+		response.sendRedirect("/simple-sso-server/");
 	}
 
 	public void init(FilterConfig config) throws ServletException {}
